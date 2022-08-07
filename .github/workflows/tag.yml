@@ -22,5 +22,5 @@ jobs:
       - name: build the image
         run: |
           docker buildx build --push \
-          --tag androw/docker-security:${GITHUB_REF/refs\/tags\//} \
+          --tag androw/caddy-security:${GITHUB_REF/refs\/tags\//} \
           --platform linux/amd64,linux/arm/v7,linux/arm64 .
