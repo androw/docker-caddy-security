@@ -1,7 +1,7 @@
 FROM caddy:2.11-builder AS builder
 
 RUN xcaddy build \
-    --with github.com/greenpau/caddy-security@v1.1.32
+    --with github.com/greenpau/caddy-security@v1.1.33
 
 FROM caddy:2.11
 
