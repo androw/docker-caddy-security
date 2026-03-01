@@ -1,8 +1,8 @@
-FROM caddy:2.11-builder AS builder
+FROM caddy:2.11.1-builder AS builder
 
 RUN xcaddy build \
     --with github.com/greenpau/caddy-security@v1.1.34
 
-FROM caddy:2.11
+FROM caddy:2.11.1
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
